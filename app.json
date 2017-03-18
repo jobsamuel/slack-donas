@@ -1,0 +1,8 @@
+{
+  "name": "slack-donas",
+  "description": "Un webhook que responde a un comando en Slack",
+  "repository": "https://github.com/simpleloops/slack-donas",
+  "logo": "https://raw.githubusercontent.com/Ranks/emojione/master/assets/png_512x512/1f369.png",
+  "success_url": "/",
+  "keywords": ["slack", "command", "node", "donas", "venezuela"]
+}
