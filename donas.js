@@ -4,7 +4,7 @@
  * que se encarga de responder el comando
  * "/donas" accionado en Slack.
  *
- * Licencia MIT © 2017 simpleloops
+ * Licencia MIT © 2017 despejala
  */
 
 // Dependencias
