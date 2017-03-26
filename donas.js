@@ -11,14 +11,14 @@
 const express = require('express');
 const server = express();
 
-/* Configuración del puerto.
+/* Configuración del puerto
  *
  * Permite el funcionamiento en el entorno local
  * y en el de producción; por ejemplo, en Heroku.
  */
 server.set('port', process.env.PORT || 3000);
 
-/* Método GET.
+/* Método GET
  *
  * Una vez inicializado el servidor, al acceder
  * (al enviar un HTTP GET Request) a la URL
@@ -29,7 +29,7 @@ server.get('/', (req, res) => {
   res.send('OK');
 });
 
-/* Método POST.
+/* Método POST
  *
  * Le permite al API de Slack comunicarse con
  * el servidor (enviar un HTTP POST Request).
@@ -41,7 +41,7 @@ server.post('/', (req, res) => {
   res.send(':doughnut: :doughnut: :coffee:');
 });
 
-/* Inicialización del servidor.
+/* Inicialización del servidor
  *
  * Es aquí donde el servidor comienza a trabajar,
  * es decir, donde comienza a "escuchar" peticiones
