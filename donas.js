@@ -18,6 +18,19 @@ const server = express();
  */
 server.set('port', process.env.PORT || 3000);
 
+/* Middleware
+ *
+ * Funciona de intermediario al hacer una petición
+ * al servidor. Cada vez que se accede a un URL,
+ * se muestra en la terminal el método y url
+ * de dicha petición.
+ */
+server.use('/', (req, res, next) => {
+  console.log(`${req.method} ${req.originalUrl}`);
+
+  next();
+});
+
 /* Método GET
  *
  * Una vez inicializado el servidor, al acceder
@@ -50,6 +63,12 @@ server.post('/', (req, res) => {
  * (sólo una vez) en la consola el mensaje definido
  * en el callback.
  */
-server.listen(server.set('port'), () => {
-  console.log('Todo anda chévere ✔');
+server.listen(server.set('port'), (error) => {
+  if (error) {
+    return console.error(error);
+  }
+
+  console.log('--------------------------');
+  console.log('Status: OK \nURL: http://localhost:3000');
+  console.log('--------------------------');
 });
